@@ -21,7 +21,7 @@ class MyAppTest < Minitest::Test
 
   def test_should_fail
     get '/'
-    assert_equal 'Foo', last_response.body
+    refute_equal 'Foo', last_response.body
   end
 
 end
