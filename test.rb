@@ -19,4 +19,9 @@ class MyAppTest < Minitest::Test
     assert_equal 'Hello, Frank!', last_response.body
   end
 
+  def test_should_fail
+    get '/'
+    assert_equal 'Foo', last_response.body
+  end
+
 end
